@@ -47,48 +47,20 @@ hr {
   border-radius: 6px;
 }
 
-
-
-
-.fold {
-	/* background: -webkit-linear-gradient(top, #e5e5e5, #ccc); */
-	padding: 10px;
-	/* width: 280px;
-	height: 80px; */
-	/* color: #999; */
-	/* -webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s linear;
-	transition: all 0.3s linear; */
+.collapsible {
+  background-color: #212121;
+  color: #cfcfcf;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
 }
 
-.unfolder { display: none; }
-
-.toggle-label {
-	display: inline-block;
-	cursor: pointer;
-	font-size: 11px;
-	border-radius: 5px;
-	padding: 5px;
-}
-.unfold-icon, .fold-icon {
-  /* color: #999;   */
-  width: 10px;
-  display: inline-block;
-}
-.unfolder ~ .fold {
+.content {
+  padding: 8px;
   display: none;
+  overflow: hidden;  
 }
-.unfolder ~ label .fold-icon {
-  display: none;
-}
-
-.unfolder:checked ~ .fold {
-  display: block;
-}
-.unfolder:checked ~ label .fold-icon {
-  display: inline-block;
-}
-.unfolder:checked ~ label .unfold-icon {
-  display: none;
-}
-
