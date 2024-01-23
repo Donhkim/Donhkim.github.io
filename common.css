@@ -55,10 +55,10 @@ hr {
 	padding: 10px;
 	/* width: 280px;
 	height: 80px; */
-	color: #999;
-	-webkit-transition: all 0.3s linear;
+	/* color: #999; */
+	/* -webkit-transition: all 0.3s linear;
 	-moz-transition: all 0.3s linear;
-	transition: all 0.3s linear;
+	transition: all 0.3s linear; */
 }
 
 .unfolder { display: none; }
@@ -71,7 +71,7 @@ hr {
 	padding: 5px;
 }
 .unfold-icon, .fold-icon {
-  color: #999;  
+  /* color: #999;   */
   width: 10px;
   display: inline-block;
 }
