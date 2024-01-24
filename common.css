@@ -1,22 +1,20 @@
-.article-title {
+body {
   font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, 돋움, Helvetica,
-    sans-serif;
+  sans-serif;
+  background-color: #212121;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.article-title {
   font-size: 17px;
   color: #95aefc;
   padding: 10px;
 }
 
 .article-descr {
-  font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, 돋움, Helvetica,
-    sans-serif;
   font-size: 16px;
   color: #cfcfcf;
-}
-
-body {
-  background-color: #212121;
-  max-width: 300px;
-  margin: 0 auto;
 }
 
 a:link {
@@ -36,7 +34,7 @@ hr {
   opacity: 0.1;
 }
 
-.navBtn {
+.nav-btn {
   background-color: #007AFF;
   border: none;
   color: white;
@@ -48,6 +46,17 @@ hr {
   margin: 16px 8px;
   cursor: pointer;
   border-radius: 6px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.update-time {
+  color: #cfcfcf;
+  font-size: 13px;
 }
 
 .collapsible {
