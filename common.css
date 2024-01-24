@@ -3,6 +3,7 @@
     sans-serif;
   font-size: 17px;
   color: #95aefc;
+  padding: 10px;
 }
 
 .article-descr {
@@ -39,7 +40,7 @@ hr {
   background-color: #007AFF;
   border: none;
   color: white;
-  padding: 8px 10px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -63,7 +64,7 @@ hr {
 }
 
 .content {
-  padding: 8px;
+  padding: 10px;
   display: none;
   overflow: hidden;  
   line-height: 1.6;
