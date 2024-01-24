@@ -15,7 +15,7 @@
 
 body {
   background-color: #212121;
-  max-width: 800px;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -68,4 +68,5 @@ hr {
   display: none;
   overflow: hidden;  
   line-height: 1.6;
+  text-align: justify;
 }
