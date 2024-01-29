@@ -9,10 +9,21 @@ function getNextSibling(elem, selector) {
   }
 }
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
-var prevTextElem;
-var prevClickElem;
+function getPrevSibling(elem, selector) {
+    var sibling = elem.previousElementSibling;
+  
+    if (!selector) return sibling;
+  
+    while (sibling) {
+      if (sibling.matches(selector)) return sibling;
+      sibling = sibling.previousElementSibling;
+    }
+  }
+
+let coll = document.getElementsByClassName("collapsible");
+let i;
+let prevTextElem;
+let prevClickElem;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
@@ -28,7 +39,7 @@ for (i = 0; i < coll.length; i++) {
       prevTextElem.style.display = "none";
     }
     nextSiblingClassName = this.className.split(" ")[1];
-    var content = getNextSibling(this.parentElement, `.${nextSiblingClassName}`);
+    let content = getNextSibling(this.parentElement, `.${nextSiblingClassName}`);
 
     if (prevTextElem === content) {
       prevTextElem = null;
@@ -39,6 +50,8 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "none";
     } else {
       content.style.display = "block";
+      let articleTitle = getPrevSibling(this.parentElement, '.article-title');
+      articleTitle.scrollIntoView({ behavior: "smooth" });
     }
     prevTextElem = content;
   });
