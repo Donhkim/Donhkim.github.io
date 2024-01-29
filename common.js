@@ -1,33 +1,38 @@
 function getNextSibling(elem, selector) {
+  var sibling = elem.nextElementSibling;
 
-	// Get the next sibling element
-	var sibling = elem.nextElementSibling;
+  if (!selector) return sibling;
 
-	// If there's no selector, return the first sibling
-	if (!selector) return sibling;
-
-	// If the sibling matches our selector, use it
-	// If not, jump to the next sibling and continue the loop
-	while (sibling) {
-		if (sibling.matches(selector)) return sibling;
-		sibling = sibling.nextElementSibling
-	}
+  while (sibling) {
+    if (sibling.matches(selector)) return sibling;
+    sibling = sibling.nextElementSibling;
+  }
 }
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
+var prevTextElem;
 var prevClickElem;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
-    // this.classList.toggle("active");
-    (prevClickElem) && (prevClickElem.style.display = "none");
-    nextSiblingClassName = this.className.split(' ')[1];    
+    this.classList.toggle("active-button");
+
+    if (prevClickElem && prevClickElem !== this && prevClickElem.classList.contains("active-button")) {
+      prevClickElem.classList.remove("active-button");
+    }
+
+    prevClickElem = this;
+
+    if (prevTextElem) {
+      prevTextElem.style.display = "none";
+    }
+    nextSiblingClassName = this.className.split(" ")[1];
     var content = getNextSibling(this.parentElement, `.${nextSiblingClassName}`);
 
-    if (prevClickElem === content) {
-        prevClickElem = null;
-        return
+    if (prevTextElem === content) {
+      prevTextElem = null;
+      return;
     }
 
     if (content.style.display === "block") {
@@ -35,6 +40,6 @@ for (i = 0; i < coll.length; i++) {
     } else {
       content.style.display = "block";
     }
-    prevClickElem = content;
+    prevTextElem = content;
   });
 }

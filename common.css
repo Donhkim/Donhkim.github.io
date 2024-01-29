@@ -71,7 +71,7 @@ hr {
   font-size: 15px;
   text-align: center;
   border-radius: 6px;
-  margin: 4px;
+  margin: 4px;  
 }
 
 .content {
@@ -84,5 +84,10 @@ hr {
 
 .article-buttons {  
   display: flex;  
-  margin: 4px;
+  margin: 4px;  
+}
+
+.active-button {
+  background-color: rgb(250, 238, 66);
+  color: rgb(50, 50, 50);
 }
