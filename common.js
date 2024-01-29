@@ -24,6 +24,12 @@ for (i = 0; i < coll.length; i++) {
     (prevClickElem) && (prevClickElem.style.display = "none");
     nextSiblingClassName = this.className.split(' ')[1];    
     var content = getNextSibling(this.parentElement, `.${nextSiblingClassName}`);
+
+    if (prevClickElem === content) {
+        prevClickElem = null;
+        return
+    }
+
     if (content.style.display === "block") {
       content.style.display = "none";
     } else {
