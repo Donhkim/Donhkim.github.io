@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Grid with Responsive Side Panel</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .main-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .side-panel {
+            width: 20%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        @media only screen and (orientation: portrait) {
+            .side-panel {
+                display: none;
+            }
+
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);             
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Card Grid with Responsive Side Panel</div>
+    <div class="main-container">
+        <div class="side-panel">
+            <div class="header">Menu</div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <h2>Card 1</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>25</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Card 2</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Jane</td>
+                        <td>30</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Card 3</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>22</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Card 4</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Alice</td>
+                        <td>28</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Card 5</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Eva</td>
+                        <td>26</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
