@@ -1,93 +1,108 @@
 body {
-  font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, 돋움, Helvetica,
-  sans-serif;
-  background-color: #212121;
-  max-width: 300px;
-  margin: auto;
+    font-family: Arial, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, 돋움, Helvetica,
+        sans-serif;
+    background-color: #212121;
+    max-width: 300px;
+    margin: auto;
 }
 
 .article-title {
-  display: inline-block;
-  font-size: 17px;
-  color: #95aefc;
-  padding: 8px;
+    display: inline-block;
+    font-size: 17px;
+    color: #95aefc;
+    padding: 8px;
 }
 
 .article-descr {
-  font-size: 16px;
-  color: #cfcfcf;
+    font-size: 16px;
+    color: #cfcfcf;
 }
 
 a:link {
-  text-decoration: none;
+    text-decoration: none;
 }
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 a:active {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 hr {
-  opacity: 0.1;  
-  margin: 0px;
+    opacity: 0.1;
+    margin: 0px;
 }
 
 .nav-btn {
-  background-color: #007AFF;
-  border: none;
-  color: white;
-  padding: 6px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;  
-  cursor: pointer;
-  border-radius: 6px;
+    background-color: #007aff;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
 }
 
 .nav-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px;
 }
 
 .update-time {
-  color: #cfcfcf;
-  font-size: 13px;
+    color: #cfcfcf;
+    font-size: 13px;
 }
 
 .collapsible {
-  background-color: #323232;
-  color: #cfcfcf;
-  cursor: pointer;
-  width: calc(100% - 8px);  
-  padding: 10px;
-  border: none;
-  font-size: 15px;
-  text-align: center;
-  border-radius: 6px;
-  margin: 4px;  
+    background-color: #323232;
+    color: #cfcfcf;
+    cursor: pointer;
+    width: calc(100% - 8px);
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 6px;
+    margin: 4px;
 }
 
 .content {
-  margin: 8px;
-  display: none;
-  overflow: hidden;  
-  line-height: 1.6;
-  text-align: justify;
+    margin: 8px;
+    display: none;
+    overflow: hidden;
+    line-height: 1.6;
+    text-align: justify;
 }
 
-.article-buttons {  
-  display: flex;  
-  margin: 4px;  
+.article-buttons {
+    display: flex;
+    margin: 4px;
 }
 
 .active-button {
-  background-color: rgb(250, 238, 66);
-  color: rgb(50, 50, 50);
+    background-color: rgb(250, 238, 66);
+    color: rgb(50, 50, 50);
+}
+
+#floating-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    display: none;
 }
