@@ -29,7 +29,7 @@ for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
         if (this.classList.contains("news-summary")) {
             let nextElem = getNextSibling(this.parentElement, ".news-text");
-            copyTextToClipboard(`다음 문장의 핵심만 영어로 뽑은후, list english korean for each key point: ${nextElem.textContent}`);
+            copyTextToClipboard(`다음 글에서 key points 만 뽑은후, list english korean for each key point: ${nextElem.textContent}`);
             if (isiOS()) {
                 window.location.href = "com.openai.chat://";
             } else {
