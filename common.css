@@ -9,7 +9,7 @@ body {
 .article-title {
     display: inline-block;
     font-size: 17px;
-    color: #95aefc;
+    color: #9ecdff;
     padding: 8px;
 }
 
@@ -90,6 +90,11 @@ hr {
 .active-button {
     background-color: rgb(250, 238, 66);
     color: rgb(50, 50, 50);
+}
+
+.valid_content {
+    background-color: #323232;
+    color: rgb(250, 238, 66);    
 }
 
 #floating-window {
