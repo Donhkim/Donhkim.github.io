@@ -27,16 +27,16 @@ let prevClickElem;
 
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
-        if (this.classList.contains("news-summary")) {
-            let nextElem = getNextSibling(this.parentElement, ".news-text");
-            copyTextToClipboard(`${nextElem.textContent}`);
-            if (isiOS()) {
-                window.location.href = "com.openai.chat://";
-            } else {
-                showFloatingWindow();
-            }
-            return;
-        }
+        // if (this.classList.contains("news-summary")) {
+        //     let nextElem = getNextSibling(this.parentElement, ".news-text");
+        //     copyTextToClipboard(`${nextElem.textContent}`);
+        //     if (isiOS()) {
+        //         window.location.href = "com.openai.chat://";
+        //     } else {
+        //         showFloatingWindow();
+        //     }
+        //     return;
+        // }
 
         this.classList.toggle("active-button");
 
