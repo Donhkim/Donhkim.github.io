@@ -6,6 +6,10 @@ body {
     margin: auto;
 }
 
+li strong {
+    color: #90b2ff;
+}
+
 .article-title {
     display: inline-block;
     font-size: 17px;
