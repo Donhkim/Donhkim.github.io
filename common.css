@@ -63,6 +63,7 @@ hr {
 .update-time {
     color: #cfcfcf;
     font-size: 13px;
+    text-align: center;
 }
 
 .collapsible {
