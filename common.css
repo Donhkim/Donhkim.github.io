@@ -22,6 +22,7 @@ strong {
     color: #cfcfcf;
 }
 
+/******************/
 a:link {
     text-decoration: none;
 }
@@ -34,6 +35,24 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+/******************/
+.content a:link {
+    color: #007aff;
+    text-decoration: none;
+}
+.content a:visited {
+    color: #007aff;
+    text-decoration: none;
+}
+.content a:hover {
+    color: #007aff;
+    text-decoration: none;
+}
+.content a:active {
+    color: #007aff;
+    text-decoration: none;
+}
+/******************/
 
 hr {
     opacity: 0.1;
@@ -97,10 +116,10 @@ hr {
     color: rgb(50, 50, 50);
 }
 
-.valid_content {
+/* .valid_content {
     background-color: #323232;
     color: rgb(250, 238, 66);    
-}
+} */
 
 #floating-window {
     position: fixed;
